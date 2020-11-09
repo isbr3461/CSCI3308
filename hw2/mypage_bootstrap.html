@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>About Me.</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <title>Home Page</title>
+    	<link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon'/>
+        <!-- Bootstrap core CSS -->
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <style>
+        th,td{
+          padding: 5px;
+        }
+        img{
+          border-radius: 50%;
+        }
+        .center {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        var new_id;
+        function addCard(id){
+          new_id = "my_card"
+          var tweet = $('<div class="card text-white bg-dark mb-3" id ='+new_id+'>\
+          <div class="text-center" style = "width: 3">\
+          <img src = "https://img.icons8.com/nolan/2x/twitter.png">\
+          <h1> Add Tweet </h1>\
+          <p> Cool sample tweet. </p>\
+          <button onclick="deleteCard('+new_id+')">Delete Card</button>\
+          </div>\
+          </div>\
+          ');
+          tweet.appendTo(id);
+        }
+        function deleteCard(id1){
+          //no idea why this doesnt work i give up
+          if(document.getElementById(id1) != undefined){
+            document.getElementById(id1).remove();
+          }
+
+        }
+
+        </script>
+      </head>
+      <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      		    <span class="navbar-toggler-icon"></span>
+      	  </button>
+      	  <div class="collapse navbar-collapse" id="navbarText">
+      		    <ul class="navbar-nav mr-auto">
+      		        <li class="nav-item active">
+      			           <a class="nav-link" href="mypage_bootstrap.html">Home <span class="sr-only">(current)</span></a>
+      		        </li>
+                  <li class="nav-item active">
+      			           <a class="nav-link" href="projects.html">Projects <span class="sr-only">(current)</span></a>
+      		        </li>
+                  <li class="nav-item active">
+                       <a class="nav-link" href="form.html">Form <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+      			           <a class="nav-link" href="tic-tac-toe.html">Tic Tac Toe <span class="sr-only">(current)</span></a>
+      		        </li>
+                  <li class="nav-item active">
+      			           <a class="nav-link" href="login.html">Login <span class="sr-only">(current)</span></a>
+      		        </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class = "navbar-nav ml-auto">
+                  <a class="nav-link" href="https://github.com/isbr3461"> <span class="navbar-nav ml-auto"><img src="https://pngimg.com/uploads/github/github_PNG63.png" width = "25" height = "25"></span></a>
+              </ul>
+      	  </div>
+        </nav>
+
+        <div class="container">
+          <h1>Brandes, Isabelle <small class="text-muted"> - Software Development Methods and Tools</small></h1>
+        </div>
+<br>
+        <div class = "container">
+          <div class="card">
+            <div class="card-body">Hi, I'm from Florida, I can juggle, and the only dance I know how to do is the macarena. I am studying computer science because I started making minecraft mods at age 11 and
+            I dont really know what else to do with these skills at this point</div>
+            </div>
+        </div>
+<br>
+        <div class="container">
+          <img src="https://pbs.twimg.com/media/EitpDZ-XgAA1vqt?format=jpg&name=900x900" alt = "Cool picture from adventure time" width ="300" height ="300">
+        </div>
+
+      <div class="container">
+        <p> </p>
+          <h3> My Favorite Projects </h3>
+          <table>
+            <tr>
+              <th>Project</th>
+              <th>Technology</th>
+            </tr>
+            <tr>
+              <td>Dating Simulator</td>
+              <td>Java</td>
+            </tr>
+            <tr>
+              <td>Local Pet Finder</td>
+              <td>Java/SQL</td>
+            </tr>
+              <td>Small Platformer</td>
+              <td>Unity</td>
+              <tr>
+              </tr>
+            </table>
+      </div>
+      <br>
+
+      <div class="container">
+        <h1>Interests
+          <a href="form.html">
+          <button type="button" class="btn btn-dark float-right">Add Interest</button>
+        </a>
+        </h1>
+      </div>
+
+<br>
+      <div class="container">
+        <div class="row">
+            <div class="card text-white bg-dark mb-3" style="width: 15rem; " id = "interest1">
+              <img class="card-img" src="https://cdn.mos.cms.futurecdn.net/iPKatp6VvEFwBwMeYXSwhR.jpg">
+              <div class="card-body">
+                <h5 class="card-title">Videogames</h5>
+                <p class="card-text">I like Videogames because they're relaxing</p>
+                <button type="button" class="btn btn-success" onclick = "addCard('#interest1')" >Add</button>
+              </div>
+            </div>
+
+          <div class="card text-white bg-dark mb-3" style="width: 15rem;" id = "interest2">
+            <img class="card-img" src="https://www.denofgeek.com/wp-content/uploads/2015/02/6jskhkaa4xce9mezfhb5ee.jpg?resize=768%2C432">
+            <div class="card-body">
+              <h5 class="card-title">Horror Movies</h5>
+              <p class="card-text">I like horror movies because I like to be scared</p>
+              <button type="button" class="btn btn-success" onclick = "addCard('#interest2')" >Add</button>
+            </div>
+          </div>
+
+          <div class="card text-white bg-dark mb-3" style="width: 15rem;" id = "interest3">
+            <img class="card-img" src="https://vulturehound.co.uk/wp-content/uploads/2012/07/muse-2nd-law-album-cover.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Music</h5>
+              <p class="card-text">I like music because its pretty</p>
+              <button type="button" class="btn btn-success" onclick = "addCard('#interest3')" >Add</button>
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+
+    <footer class="bg-secondary">
+      <div class="container-fluid">
+        <a href="https://www.linkedin.com/in/isabelle-brandes-2610a417a/">
+          <img src="https://cdn.iconscout.com/icon/free/png-256/linkedin-2662666-2213265.png" width = "50" height = "50" class="center">
+        </a>
+    </div>
+    </footer>
+      </body>
+    </html>
